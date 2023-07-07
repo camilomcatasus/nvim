@@ -6,10 +6,11 @@ vim.keymap.set("n", "<leader>nt", vim.cmd.NvimTreeToggle)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
+require('nvim-web-devicons').setup()
 require("nvim-tree").setup()
 
 
 require("cambucha")
 vim.o.shiftwidth = 3
 vim.o.tabstop = 3
-vim.opt.number = true
+vim.opt.relativenumber = true
