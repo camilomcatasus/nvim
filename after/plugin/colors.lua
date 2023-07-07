@@ -9,10 +9,6 @@ Select a theme:
 	print(theme_message)
 	local input = vim.fn.input("Theme number? ")
 
-	if vim.fn.has("termguicolors") then
-		vim.opt.termguicolors = false
-	end
-
 	if input ~= '4' then
 		require('lualine').setup()
 	end
@@ -20,9 +16,6 @@ Select a theme:
 	if input == "1" then
 		vim.cmd[[colorscheme tokyonight-night]]
 	elseif input == "2" then
-	if vim.fn.has("termguicolors") then
-		vim.opt.termguicolors = true
-		end
 		require("boo-colorscheme").use({
 			italic = true,
 			theme = "boo"
@@ -44,7 +37,23 @@ Select a theme:
 	end
 end
 
+
+
+require 'colorizer'.attach_to_buffer(0, {
+	filetypes = {
+		"css",
+		"javascript",
+		"html"
+		
+	},
+	user_default_options = {
+		css = true,
+		tailwind = true,
+		always_update = true,
+	},
+})
 require('lualine').setup()
 vim.cmd[[colorscheme tokyonight-night]]
 
 vim.api.nvim_set_keymap('n', "<leader>c", '<cmd>lua select_theme()<CR>', {noremap = true, silent = true})
+
