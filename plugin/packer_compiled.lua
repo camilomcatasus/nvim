@@ -179,6 +179,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\ccatas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\range-highlight.nvim",
     url = "https://github.com/winston0410/range-highlight.nvim"
   },
+  ripgrep = {
+    loaded = true,
+    path = "C:\\Users\\ccatas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\ripgrep",
+    url = "https://github.com/BurntSushi/ripgrep"
+  },
   ["rose-pine"] = {
     loaded = true,
     path = "C:\\Users\\ccatas\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rose-pine",
