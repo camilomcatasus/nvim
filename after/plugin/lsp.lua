@@ -12,6 +12,8 @@ lsp.ensure_installed({
 	'rust_analyzer',
 })
 
+
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -27,6 +29,17 @@ lsp.set_preferences({
 
 lsp.setup_nvim_cmp({
 	mapping = cmp_mappings
+})
+
+require('lspconfig').rust_analyzer.setup({
+	 on_attach=on_attach;
+    settings = {
+        ["rust-analyzer"] = {
+            checkOnSave = {
+                extraArgs={"--target-dir", "/tmp/rust-analyzer-check"}
+            }
+        }
+    }
 })
 
 
@@ -47,5 +60,6 @@ end)
 
 -- (Optional) Configure lua language server for neovim
 --require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+
 
 lsp.setup()
