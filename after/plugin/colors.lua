@@ -56,4 +56,6 @@ require('lualine').setup()
 vim.cmd[[colorscheme tokyonight-night]]
 
 vim.api.nvim_set_keymap('n', "<leader>c", '<cmd>lua select_theme()<CR>', {noremap = true, silent = true})
-
+vim.opt.tabstop = 4;
+vim.opt.shiftwidth = 4;
+vim.opt.scrolloff = 5;
