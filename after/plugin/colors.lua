@@ -57,5 +57,14 @@ vim.cmd[[colorscheme tokyonight-night]]
 
 vim.api.nvim_set_keymap('n', "<leader>c", '<cmd>lua select_theme()<CR>', {noremap = true, silent = true})
 vim.opt.tabstop = 4;
+vim.opt.softtabstop = 4;
 vim.opt.shiftwidth = 4;
-vim.opt.scrolloff = 5;
+vim.opt.scrolloff = 8;
+vim.opt.expandtab = true;
+vim.opt.smartindent = true;
+
+vim.opt.hlsearch = false;
+vim.opt.incsearch = true;
+
+vim.opt.signcolumn = "yes";
+
