@@ -44,7 +44,6 @@ require 'colorizer'.attach_to_buffer(0, {
 		"css",
 		"javascript",
 		"html"
-		
 	},
 	user_default_options = {
 		css = true,
@@ -62,7 +61,7 @@ vim.opt.shiftwidth = 4;
 vim.opt.scrolloff = 8;
 vim.opt.expandtab = true;
 vim.opt.smartindent = true;
-
+vim.opt.wrap = false;
 vim.opt.hlsearch = false;
 vim.opt.incsearch = true;
 
